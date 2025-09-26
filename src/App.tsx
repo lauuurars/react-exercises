@@ -1,5 +1,6 @@
 import './App.css'
 import GreetingCard from './components/GreetingCard' // exportando nuestro componente para renderizarlo :3
+import InputPreview from './components/InputPreview'
 import LikePost from './components/LikePost'
 
 function App() {
@@ -23,6 +24,8 @@ function App() {
     </div>
 
     <LikePost />
+
+    <InputPreview />
     </>
   )
 }
