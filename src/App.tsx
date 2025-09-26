@@ -3,6 +3,7 @@ import GreetingCard from './components/GreetingCard' // exportando nuestro compo
 import InputPreview from './components/InputPreview'
 import LikePost from './components/LikePost'
 import MascotCard from './components/MascotCard'
+import ToggleInfo from './components/ToggleInfo'
 
 function App() {
 
@@ -44,6 +45,8 @@ function App() {
           <MascotCard key={index} name={animal.name} animalType={animal.animalType} />
         ))}
       </div>
+
+      <ToggleInfo /> 
     </>
   )
 }

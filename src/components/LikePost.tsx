@@ -18,7 +18,7 @@ function LikePost() {
             <div className="flex items-center space-x-3">
                 <button
                     onClick={() => setLike(like + 1)}
-                    className="flex items-center px-4 py-2 bg-pink-500 text-white rounded-full shadow hover:bg-pink-600 transition"
+                    className="flex items-center px-4 py-2 bg-violet-500 text-white rounded-full shadow hover:bg-violet-600 transition"
                 >
                     ❤️ Like
                 </button>
