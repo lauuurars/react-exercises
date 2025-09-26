@@ -4,6 +4,7 @@ import InputPreview from './components/InputPreview'
 import LikePost from './components/LikePost'
 import MascotCard from './components/MascotCard'
 import ToggleInfo from './components/ToggleInfo'
+import UserOnline from './components/UserOnline'
 
 function App() {
 
@@ -47,6 +48,8 @@ function App() {
       </div>
 
       <ToggleInfo /> 
+
+      <UserOnline />
     </>
   )
 }
