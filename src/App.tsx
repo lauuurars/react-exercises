@@ -1,4 +1,5 @@
 import './App.css'
+import Clock from './components/DigitalClock'
 import GreetingCard from './components/GreetingCard' // exportando nuestro componente para renderizarlo :3
 import InputPreview from './components/InputPreview'
 import LikePost from './components/LikePost'
@@ -53,6 +54,8 @@ function App() {
       <UserOnline />
 
       <RegisterForm />
+
+      <Clock />
     </>
   )
 }
