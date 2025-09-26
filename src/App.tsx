@@ -1,34 +1,24 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+import GreetingCard from './components/GreetingCard' // exportando nuestro componente para renderizarlo :3
 
 function App() {
-  const [count, setCount] = useState(0)
+
+  // creamos un array para generar diferentes cards
+  const users = [
+    { name: "Laura", age: 18 },
+    { name: "Carlos", age: 30 },
+    { name: "Ana", age: 15 },
+    { name: "Miguel", age: 28 }
+  ]
+
+  // establecemos los usuarios que la función recibe y el index para que pueda acceder a cada elemento y lo reconozca como único (tipo un id), el key se encarga de identificar esta característica
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 p-6">
+      {users.map((user, index) => (
+        <GreetingCard key={index} name={user.name} age={user.age} />
+      ))}
+    </div>
   )
 }
 
