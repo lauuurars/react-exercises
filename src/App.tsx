@@ -8,6 +8,7 @@ import MascotCard from './components/MascotCard'
 import RegisterForm from './components/RegisterForm'
 import ToggleInfo from './components/ToggleInfo'
 import UserOnline from './components/UserOnline'
+import UserSearch from './components/UserSearch'
 
 function App() {
 
@@ -72,6 +73,8 @@ function App() {
           <BuyCard key={index} name={product.name} cost={product.cost} />
         ))}
       </div>
+
+      <UserSearch />
     </>
   )
 }
