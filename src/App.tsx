@@ -3,6 +3,7 @@ import GreetingCard from './components/GreetingCard' // exportando nuestro compo
 import InputPreview from './components/InputPreview'
 import LikePost from './components/LikePost'
 import MascotCard from './components/MascotCard'
+import RegisterForm from './components/RegisterForm'
 import ToggleInfo from './components/ToggleInfo'
 import UserOnline from './components/UserOnline'
 
@@ -50,6 +51,8 @@ function App() {
       <ToggleInfo /> 
 
       <UserOnline />
+
+      <RegisterForm />
     </>
   )
 }
