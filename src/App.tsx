@@ -1,4 +1,5 @@
 import './App.css'
+import BuyCard from './components/BuyCard'
 import Clock from './components/DigitalClock'
 import GreetingCard from './components/GreetingCard' // exportando nuestro componente para renderizarlo :3
 import InputPreview from './components/InputPreview'
@@ -29,6 +30,15 @@ function App() {
     { name: "Piero", animalType: "Gato" }
   ]
 
+  const products = [
+    { name: "iPhone 17", cost: 1700},
+    { name: "Llavero Kuromi", cost: 500},
+    { name: "AirPods Pro", cost: 1200},
+    { name: "Zapatos Adidas", cost: 400},
+    { name: "Gorra Snoopy", cost: 120},
+    { name: "iPad Pro M4", cost: 2000}
+  ]
+
   // Ejercicio 1: establecemos los usuarios que la función recibe y el index para que pueda acceder a cada elemento y lo reconozca como único (tipo un id), el key se encarga de identificar esta característica
 
   return (
@@ -49,13 +59,19 @@ function App() {
         ))}
       </div>
 
-      <ToggleInfo /> 
+      <ToggleInfo />
 
       <UserOnline />
 
       <RegisterForm />
 
       <Clock />
+      
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-6" >
+        {products.map((product, index) => (
+          <BuyCard key={index} name={product.name} cost={product.cost} />
+        ))}
+      </div>
     </>
   )
 }
